@@ -18,7 +18,7 @@ impl Stack {
 
     pub fn pop(&mut self) -> i32 {
         let res = self.data[self.sp];
-        self.data[self.sp] = 0;
+        self.data[self.sp] = i32::MIN;
         self.decrement_pointer();
         
         res
